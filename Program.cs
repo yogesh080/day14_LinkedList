@@ -22,6 +22,10 @@
             linkedList2.append(70);
 
             linkedList2.Display();
+
+
+            linkedList.InsertBetween(56, 30, 70);
+            linkedList.Display();
         }
     }
 }
