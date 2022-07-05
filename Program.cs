@@ -25,8 +25,11 @@
 
 
             linkedList.InsertBetween(56, 30, 70);
+            ////for remove first element from the linklist 
+            //linkedList.RemoveFirst(70);
+            //linkedList.Display();
 
-            linkedList.RemoveFirst(70);
+            linkedList.RemoveLast();
             linkedList.Display();
         }
     }

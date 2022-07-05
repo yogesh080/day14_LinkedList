@@ -45,16 +45,36 @@ namespace LinkedList_Day_14
                 tail = tail.next;
             }
         }
-        public void RemoveFirst(T data)
+        public void RemoveFirst()
         {
-            Node<T> removeNode = new Node<T>(data);
 
-            if (this.head == null)
+            if (head == null)
             {
-                return;
+                return ;
             }
-            this.head = this.head.next;
-            return;
+            head = head.next;
+            return ;
+        }
+
+        public void RemoveLast()
+        {
+            Node<T> temp = head;
+            if(head == null)
+            {
+                Console.WriteLine("LinkList is empty"); ;
+            }
+            else
+            {
+                while(temp.next != tail)
+                {
+                    temp = temp.next;
+                }
+                tail = temp.next;
+                tail = temp;
+            }
+
+
+
         }
 
         public void InsertBetween(T first, T second, T middle)
