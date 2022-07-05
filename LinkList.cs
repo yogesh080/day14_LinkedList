@@ -9,7 +9,7 @@ namespace LinkListU
     {
         internal Node head;
 
-
+        // Adding number to a linkedList
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -29,7 +29,7 @@ namespace LinkListU
             Console.WriteLine("{0} interted into linked list", node.data);
 
         }
-
+        //For Display
         internal void Display()
         {
             Node temp = this.head;
