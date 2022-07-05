@@ -25,6 +25,8 @@
 
 
             linkedList.InsertBetween(56, 30, 70);
+
+            linkedList.RemoveFirst(70);
             linkedList.Display();
         }
     }
