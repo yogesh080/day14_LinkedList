@@ -1,0 +1,1 @@
+﻿Console.WriteLine("Linklist day 14 assingnment");
