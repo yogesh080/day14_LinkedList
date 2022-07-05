@@ -1,47 +1,68 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LinkListU
+namespace LinkedList_Day_14
 {
-
-    public class LinkList
+    public class LinkedList<T>
     {
-        internal Node head;
+        public Node<T> head;
+        public Node<T> tail;
 
-        // Adding number to a linkedList
-        internal void Add(int data)
+        public void add(T data)
         {
-            Node node = new Node(data);
+            Node<T> addNode = new Node<T>(data);
             if (this.head == null)
             {
-                this.head = node;
+                this.head = addNode;
             }
             else
             {
-                Node temp = head;
+                Node<T> temp = head;
                 while (temp.next != null)
                 {
                     temp = temp.next;
                 }
-                temp.next = node;
+                temp.next = addNode;
             }
-            Console.WriteLine("{0} interted into linked list", node.data);
-
+            Console.WriteLine("{0} insert into Linked list", addNode.data);
         }
-        //For Display
-        internal void Display()
+
+
+        public void append(T data)
         {
-            Node temp = this.head;
+            Node<T> appendNode = new Node<T>(data);
+            if (head == null)
+            {
+                head = appendNode;
+                tail = appendNode;
+            }
+            else
+            {
+                tail.next = appendNode;
+                tail = tail.next;
+            }
+        }
+
+        public void Display()
+        {
+            Node<T> temp = head;
             if (temp == null)
             {
-                Console.WriteLine("Linklist is empty");
+                Console.WriteLine("Linked list is empty");
             }
-            while (temp != null)
+            else
             {
-                Console.WriteLine(temp.data+"");
-                temp = temp.next;
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.data + " ");
+                    temp = temp.next;
+                }
+                Console.WriteLine();
             }
+
         }
     }
 }

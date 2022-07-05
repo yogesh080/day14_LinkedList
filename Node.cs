@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-namespace LinkListU
+using System.Threading.Tasks;
+
+namespace LinkedList_Day_14
 {
-    public class Node
+    public class Node<T>
     {
-        public int data;
-        public Node next;
-        public Node(int data)
+        public T data;
+        public Node<T> next;
+
+        public Node(T data)
         {
             this.data = data;
-
+            this.next = null;
         }
     }
 }
