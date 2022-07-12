@@ -77,6 +77,8 @@ namespace LinkedList_Day_14
 
         }
 
+
+
         public void InsertBetween(T first, T second, T middle)
         {
             Node<T> newNode = new Node<T>(middle);
@@ -93,6 +95,35 @@ namespace LinkedList_Day_14
                 }
                 temp = temp.next;
             }
+
+        }
+
+        public bool search(T data)
+        {
+            Node<T> temp = head;
+            bool isPresent = false;
+            if(head ==null)
+            {
+                Console.WriteLine("Linklist is empty");
+                return false;
+            }
+            else
+            {
+                while(temp != null)
+                {
+                    if (temp.data.Equals(data))
+                    {
+                        isPresent = true;
+                        break;
+                    }
+                    else
+                    {
+                        temp = temp.next;
+                    }
+                }
+
+            }
+            return isPresent;
 
         }
 

@@ -30,6 +30,11 @@
             //linkedList.Display();
 
             linkedList.RemoveLast();
+
+
+
+            Console.WriteLine(linkedList2.search(30));
+
             linkedList.Display();
         }
     }
